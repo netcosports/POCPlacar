@@ -42,6 +42,9 @@
 		F0F7C6C01816B48B0045FC6A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C6B61816B48B0045FC6A /* AFURLSessionManager.m */; };
 		F0F7C6C41816B6380045FC6A /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C21816B6380045FC6A /* placeholder.png */; };
 		F0F7C6C51816B6380045FC6A /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C31816B6380045FC6A /* placeholder@2x.png */; };
+		F0F7C6C91816BC900045FC6A /* Logonetco58.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C61816BC900045FC6A /* Logonetco58.png */; };
+		F0F7C6CA1816BC900045FC6A /* Logonetco80.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C71816BC900045FC6A /* Logonetco80.png */; };
+		F0F7C6CB1816BC900045FC6A /* Logonetco120.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C81816BC900045FC6A /* Logonetco120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +115,9 @@
 		F0F7C6B61816B48B0045FC6A /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		F0F7C6C21816B6380045FC6A /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = Resources/placeholder.png; sourceTree = "<group>"; };
 		F0F7C6C31816B6380045FC6A /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "placeholder@2x.png"; path = "Resources/placeholder@2x.png"; sourceTree = "<group>"; };
+		F0F7C6C61816BC900045FC6A /* Logonetco58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logonetco58.png; path = Resources/Logonetco58.png; sourceTree = "<group>"; };
+		F0F7C6C71816BC900045FC6A /* Logonetco80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logonetco80.png; path = Resources/Logonetco80.png; sourceTree = "<group>"; };
+		F0F7C6C81816BC900045FC6A /* Logonetco120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logonetco120.png; path = Resources/Logonetco120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +317,9 @@
 		F0F7C6C11816B5CF0045FC6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F0F7C6C61816BC900045FC6A /* Logonetco58.png */,
+				F0F7C6C71816BC900045FC6A /* Logonetco80.png */,
+				F0F7C6C81816BC900045FC6A /* Logonetco120.png */,
 				F0F7C6C21816B6380045FC6A /* placeholder.png */,
 				F0F7C6C31816B6380045FC6A /* placeholder@2x.png */,
 			);
@@ -392,8 +401,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F7C6CB1816BC900045FC6A /* Logonetco120.png in Resources */,
 				F0F7C6C51816B6380045FC6A /* placeholder@2x.png in Resources */,
+				F0F7C6C91816BC900045FC6A /* Logonetco58.png in Resources */,
 				F06D963B18165F9700D1939F /* InfoPlist.strings in Resources */,
+				F0F7C6CA1816BC900045FC6A /* Logonetco80.png in Resources */,
 				F0F7C6C41816B6380045FC6A /* placeholder.png in Resources */,
 				F06D966B1816604700D1939F /* UIListPocViewController.xib in Resources */,
 				F0F7C69F18169C290045FC6A /* CellArticle.xib in Resources */,
@@ -543,8 +555,8 @@
 		F06D965E18165F9800D1939F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NetcoSports";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
 				INFOPLIST_FILE = "POCPlacarAbril/POCPlacarAbril-Info.plist";
@@ -556,8 +568,8 @@
 		F06D965F18165F9800D1939F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: NetcoSports";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
 				INFOPLIST_FILE = "POCPlacarAbril/POCPlacarAbril-Info.plist";
