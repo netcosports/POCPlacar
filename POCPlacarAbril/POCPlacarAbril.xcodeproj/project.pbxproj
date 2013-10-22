@@ -45,6 +45,7 @@
 		F0F7C6C91816BC900045FC6A /* Logonetco58.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C61816BC900045FC6A /* Logonetco58.png */; };
 		F0F7C6CA1816BC900045FC6A /* Logonetco80.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C71816BC900045FC6A /* Logonetco80.png */; };
 		F0F7C6CB1816BC900045FC6A /* Logonetco120.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C81816BC900045FC6A /* Logonetco120.png */; };
+		F0F7C6CD1816C64D0045FC6A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6CC1816C64D0045FC6A /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		F0F7C6C61816BC900045FC6A /* Logonetco58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logonetco58.png; path = Resources/Logonetco58.png; sourceTree = "<group>"; };
 		F0F7C6C71816BC900045FC6A /* Logonetco80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logonetco80.png; path = Resources/Logonetco80.png; sourceTree = "<group>"; };
 		F0F7C6C81816BC900045FC6A /* Logonetco120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logonetco120.png; path = Resources/Logonetco120.png; sourceTree = "<group>"; };
+		F0F7C6CC1816C64D0045FC6A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 		F0F7C6C11816B5CF0045FC6A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F0F7C6CC1816C64D0045FC6A /* Default-568h@2x.png */,
 				F0F7C6C61816BC900045FC6A /* Logonetco58.png */,
 				F0F7C6C71816BC900045FC6A /* Logonetco80.png */,
 				F0F7C6C81816BC900045FC6A /* Logonetco120.png */,
@@ -403,6 +406,7 @@
 			files = (
 				F0F7C6CB1816BC900045FC6A /* Logonetco120.png in Resources */,
 				F0F7C6C51816B6380045FC6A /* placeholder@2x.png in Resources */,
+				F0F7C6CD1816C64D0045FC6A /* Default-568h@2x.png in Resources */,
 				F0F7C6C91816BC900045FC6A /* Logonetco58.png in Resources */,
 				F06D963B18165F9700D1939F /* InfoPlist.strings in Resources */,
 				F0F7C6CA1816BC900045FC6A /* Logonetco80.png in Resources */,

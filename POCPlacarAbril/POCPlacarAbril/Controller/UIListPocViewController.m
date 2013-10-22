@@ -66,7 +66,7 @@
         {
             data_list = nil;
             data_list = rep.resultado;
-                if (!data_list)
+                if (data_list)
                 {
                     [self.tb_list reloadData];
                     [self setRefreshButtonItem];
