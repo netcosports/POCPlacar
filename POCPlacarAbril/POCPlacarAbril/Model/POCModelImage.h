@@ -14,7 +14,7 @@
 @property (strong, nonatomic) NSString *original;
 @property (strong, nonatomic) NSString *url_template;
 
-+ (id) fromJSON:(NSDictionary*)data;
-+ (id) fromJSONArray:(NSArray*)data;
++ (POCModelImage *) fromJSON:(NSDictionary*)data;
++ (NSArray *) fromJSONArray:(NSArray*)data;
 
 @end

@@ -10,14 +10,4 @@
 
 @implementation POCModel
 
-+ (id) fromJSON:(NSDictionary*)data
-{
-    return nil;
-}
-
-+ (id) fromJSONArray:(NSArray*)data
-{
-    return nil;
-}
-
 @end

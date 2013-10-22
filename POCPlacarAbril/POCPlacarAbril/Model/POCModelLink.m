@@ -10,31 +10,34 @@
 
 @implementation POCModelLink
 
-+ (id) fromJSON:(NSDictionary*)data
++ (POCModelLink *) fromJSON:(NSDictionary*)data
 {
     POCModelLink *linkModel = [[POCModelLink alloc]init];
     
     if (data && [data isKindOfClass:[NSDictionary class]])
     {
-        if ([data objectForKey:@"href"] != nil)
-            linkModel.href = [data objectForKey:@"href"];
+        id href = [data objectForKey:@"href"];
+        if (href != nil && [href isKindOfClass:[NSString class]])
+            linkModel.href = href;
         else
             linkModel.href = @"";
-        
-        if ([data objectForKey:@"rel"] != nil)
-            linkModel.rel = [data objectForKey:@"rel"];
+
+        id rel = [data objectForKey:@"rel"];
+        if (rel != nil && [rel isKindOfClass:[NSString class]])
+            linkModel.rel = rel;
         else
             linkModel.rel = @"";
-        
-        if ([data objectForKey:@"type"] != nil)
-            linkModel.type = [data objectForKey:@"type"];
+
+        id type = [data objectForKey:@"type"];
+        if (type != nil && [type isKindOfClass:[NSString class]])
+            linkModel.type = type;
         else
             linkModel.type = @"";
     }
     return linkModel;
 }
 
-+ (id) fromJSONArray:(NSArray*)data
++ (NSArray *) fromJSONArray:(NSArray*)data
 {
     NSMutableArray *arrayLinks = [[NSMutableArray alloc] init];
     

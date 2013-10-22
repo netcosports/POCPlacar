@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     
-    [self setTitle:@"Articles per championship"];
+    [self setTitle:NSLocalizedString(@"Articles per championship", @"")];
     [self setUpList];
     [self loadData];
 }
@@ -74,7 +74,7 @@
         }
         else
         {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning" message:@"Something went wront while attempting to retrieve information from the Placar - API" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Warning", @"") message:NSLocalizedString(@"Something went wront while attempting to retrieve information from the Placar - API", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"OK", @"") otherButtonTitles:nil];
             [alert show];
         }
     }];

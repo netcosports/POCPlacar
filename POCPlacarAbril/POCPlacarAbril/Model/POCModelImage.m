@@ -10,31 +10,34 @@
 
 @implementation POCModelImage
 
-+ (id) fromJSON:(NSDictionary*)data
++ (POCModelImage *) fromJSON:(NSDictionary*)data
 {
     POCModelImage *imageModel = [[POCModelImage alloc]init];
     
     if (data && [data isKindOfClass:[NSDictionary class]])
     {
-        if ([data objectForKey:@"descricaco"] != nil)
-            imageModel.descricaco = [data objectForKey:@"descricaco"];
+        id descricaco = [data objectForKey:@"descricaco"];
+        if (descricaco != nil && [descricaco isKindOfClass:[NSString class]])
+            imageModel.descricaco = descricaco;
         else
             imageModel.descricaco = @"";
         
-        if ([data objectForKey:@"original"] != nil)
-            imageModel.original = [data objectForKey:@"original"];
+        id original = [data objectForKey:@"original"];
+        if (original != nil && [original isKindOfClass:[NSString class]])
+            imageModel.original = original;
         else
             imageModel.original = @"";
         
-        if ([data objectForKey:@"url_template"] != nil)
-            imageModel.url_template = [data objectForKey:@"url_template"];
+        id url_template = [data objectForKey:@"url_template"];
+        if (url_template != nil && [url_template isKindOfClass:[NSString class]])
+            imageModel.url_template = url_template;
         else
             imageModel.url_template = @"";
     }
     return imageModel;
 }
 
-+ (id) fromJSONArray:(NSArray*)data
++ (NSArray *) fromJSONArray:(NSArray*)data
 {
     NSMutableArray *arrayImages = [[NSMutableArray alloc] init];
     

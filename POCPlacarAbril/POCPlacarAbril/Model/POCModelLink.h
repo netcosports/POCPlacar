@@ -14,7 +14,7 @@
 @property (strong, nonatomic) NSString *rel;
 @property (strong, nonatomic) NSString *type;
 
-+ (id) fromJSON:(NSDictionary*)data;
-+ (id) fromJSONArray:(NSArray*)data;
++ (POCModelLink *) fromJSON:(NSDictionary*)data;
++ (NSArray *) fromJSONArray:(NSArray*)data;
 
 @end

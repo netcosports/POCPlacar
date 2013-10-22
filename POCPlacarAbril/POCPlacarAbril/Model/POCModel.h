@@ -10,7 +10,4 @@
 
 @interface POCModel : NSObject
 
-+ (id) fromJSON:(NSDictionary*)data;
-+ (id) fromJSONArray:(NSArray*)data;
-
 @end

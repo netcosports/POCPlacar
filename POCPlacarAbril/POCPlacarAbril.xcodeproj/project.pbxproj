@@ -10,7 +10,6 @@
 		F06D962F18165F9700D1939F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D962E18165F9700D1939F /* Foundation.framework */; };
 		F06D963118165F9700D1939F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D963018165F9700D1939F /* CoreGraphics.framework */; };
 		F06D963318165F9700D1939F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D963218165F9700D1939F /* UIKit.framework */; };
-		F06D963518165F9700D1939F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D963418165F9700D1939F /* CoreData.framework */; };
 		F06D963B18165F9700D1939F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F06D963918165F9700D1939F /* InfoPlist.strings */; };
 		F06D963D18165F9800D1939F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D963C18165F9800D1939F /* main.m */; };
 		F06D964118165F9800D1939F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D964018165F9800D1939F /* AppDelegate.m */; };
@@ -128,7 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F06D963118165F9700D1939F /* CoreGraphics.framework in Frameworks */,
-				F06D963518165F9700D1939F /* CoreData.framework in Frameworks */,
 				F06D963318165F9700D1939F /* UIKit.framework in Frameworks */,
 				F06D962F18165F9700D1939F /* Foundation.framework in Frameworks */,
 			);
@@ -560,11 +558,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: NetcoSports";
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
 				INFOPLIST_FILE = "POCPlacarAbril/POCPlacarAbril-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -573,11 +573,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: NetcoSports";
+				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
 				INFOPLIST_FILE = "POCPlacarAbril/POCPlacarAbril-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

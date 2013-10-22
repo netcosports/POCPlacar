@@ -11,34 +11,39 @@
 
 @implementation POCModelResult
 
-+ (id) fromJSON:(NSDictionary*)data
++ (POCModelResult *) fromJSON:(NSDictionary*)data
 {
     POCModelResult *resultadoModel = [[POCModelResult alloc]init];
     
     if (data && [data isKindOfClass:[NSDictionary class]])
     {
-        if ([data objectForKey:@"titulo"] != nil)
-            resultadoModel.titulo = [data objectForKey:@"titulo"];
+        id titulo = [data objectForKey:@"titulo"];
+        if (titulo != nil && [titulo isKindOfClass:[NSString class]])
+            resultadoModel.titulo = titulo;
         else
             resultadoModel.titulo = @"";
         
-        if ([data objectForKey:@"subtitulo"] != nil)
-            resultadoModel.subtitulo = [data objectForKey:@"subtitulo"];
+        id subtitulo = [data objectForKey:@"subtitulo"];
+        if (subtitulo != nil && [subtitulo isKindOfClass:[NSString class]])
+            resultadoModel.subtitulo = subtitulo;
         else
             resultadoModel.subtitulo = @"";
         
-        if ([data objectForKey:@"slug"] != nil)
-            resultadoModel.slug = [data objectForKey:@"slug"];
+        id slug = [data objectForKey:@"slug"];
+        if (slug != nil && [slug isKindOfClass:[NSString class]])
+            resultadoModel.slug = slug;
         else
             resultadoModel.slug = @"";
 
-        if ([data objectForKey:@"data_disponibilizacao"] != nil)
-            resultadoModel.data_disponibilizacao = [data objectForKey:@"data_disponibilizacao"];
+        id data_disponibilizacao = [data objectForKey:@"data_disponibilizacao"];
+        if (data_disponibilizacao != nil && [data_disponibilizacao isKindOfClass:[NSString class]])
+            resultadoModel.data_disponibilizacao = data_disponibilizacao;
         else
             resultadoModel.data_disponibilizacao = @"";
         
-        if ([data objectForKey:@"recurso_url"] != nil)
-            resultadoModel.recurso_url = [data objectForKey:@"recurso_url"];
+        id recurso_url = [data objectForKey:@"recurso_url"];
+        if (recurso_url != nil && [recurso_url isKindOfClass:[NSString class]])
+            resultadoModel.recurso_url = recurso_url;
         else
             resultadoModel.recurso_url = @"";
         
@@ -49,7 +54,7 @@
     return resultadoModel;
 }
 
-+ (id) fromJSONArray:(NSArray*)data
++ (NSArray *) fromJSONArray:(NSArray*)data
 {
     NSMutableArray *arrayResultados = [[NSMutableArray alloc] init];
     

@@ -12,40 +12,45 @@
 
 @implementation POCModelArticlesChampionship
 
-+ (id) fromJSON:(NSDictionary*)data
++ (POCModelArticlesChampionship *) fromJSON:(NSDictionary*)data
 {
     POCModelArticlesChampionship *articlesPerChampionshipModel = [[POCModelArticlesChampionship alloc]init];
     
     if (data && [data isKindOfClass:[NSDictionary class]])
     {
-        if ([data objectForKey:@"titulo"] != nil)
-            articlesPerChampionshipModel.titulo = [data objectForKey:@"titulo"];
+        id titulo = [data objectForKey:@"titulo"];
+        if (titulo != nil && [titulo isKindOfClass:[NSString class]])
+            articlesPerChampionshipModel.titulo = titulo;
         else
             articlesPerChampionshipModel.titulo = @"";
 
-        if ([data objectForKey:@"total_resultados"] != nil)
-            articlesPerChampionshipModel.total_resultados = [[data objectForKey:@"total_resultados"] integerValue];
+        id total_resultados = [data objectForKey:@"total_resultados"];
+        if (total_resultados != nil && [total_resultados isKindOfClass:[NSNumber class]])
+            articlesPerChampionshipModel.total_resultados = [total_resultados intValue];
         else
             articlesPerChampionshipModel.total_resultados = 0;
 
-        if ([data objectForKey:@"itens_por_pagina"] != nil)
-            articlesPerChampionshipModel.itens_por_pagina = [[data objectForKey:@"itens_por_pagina"] integerValue];
+        
+        id itens_por_pagina = [data objectForKey:@"itens_por_pagina"];
+        if (itens_por_pagina != nil && [itens_por_pagina isKindOfClass:[NSNumber class]])
+            articlesPerChampionshipModel.itens_por_pagina = [itens_por_pagina intValue];
         else
             articlesPerChampionshipModel.itens_por_pagina = 0;
         
-        if ([data objectForKey:@"pagina_actual"] != nil)
-            articlesPerChampionshipModel.pagina_actual = [[data objectForKey:@"pagina_actual"] integerValue];
+        id pagina_actual = [data objectForKey:@"pagina_actual"];
+        if (pagina_actual != nil && [pagina_actual isKindOfClass:[NSNumber class]])
+            articlesPerChampionshipModel.pagina_actual = [pagina_actual intValue];
         else
             articlesPerChampionshipModel.pagina_actual = 0;
         
         articlesPerChampionshipModel.resultado = [POCModelResult fromJSONArray:[data objectForKey:@"resultado"]];
-        
+
         articlesPerChampionshipModel.links = [POCModelLink fromJSONArray:[data objectForKey:@"links"]];
     }
     return articlesPerChampionshipModel;
 }
 
-+ (id) fromJSONArray:(NSArray*)data
++ (NSArray *) fromJSONArray:(NSArray*)data
 {
     NSMutableArray *arrayArticles = [[NSMutableArray alloc] init];
     

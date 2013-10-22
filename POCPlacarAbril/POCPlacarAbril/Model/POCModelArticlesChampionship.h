@@ -18,7 +18,7 @@
 @property (strong, nonatomic) NSArray *resultado;
 @property (strong, nonatomic) NSArray *links;
 
-+ (id) fromJSON:(NSDictionary*)data;
-+ (id) fromJSONArray:(NSArray*)data;
++ (POCModelArticlesChampionship *) fromJSON:(NSDictionary*)data;
++ (NSArray *) fromJSONArray:(NSArray*)data;
 
 @end

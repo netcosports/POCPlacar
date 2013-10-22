@@ -20,7 +20,7 @@
 @property (strong, nonatomic) POCModelImage *imagem;
 @property (strong, nonatomic) NSArray *links;
 
-+ (id) fromJSON:(NSDictionary*)data;
-+ (id) fromJSONArray:(NSArray*)data;
++ (POCModelResult *) fromJSON:(NSDictionary*)data;
++ (NSArray *) fromJSONArray:(NSArray*)data;
 
 @end
