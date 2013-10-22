@@ -42,18 +42,10 @@
         else
             resultadoModel.recurso_url = @"";
         
-        if ([data objectForKey:@"imagem"] != nil)
-            resultadoModel.imagem = [POCModelImage fromJSON:[data objectForKey:@"imagem"]];
-        else
-            resultadoModel.imagem = [[POCModelImage alloc]init];
+        resultadoModel.imagem = [POCModelImage fromJSON:[data objectForKey:@"imagem"]];
         
-        
-        if ([data objectForKey:@"links"] != nil)
-            resultadoModel.links = [POCModelLink fromJSONArray:[data objectForKey:@"links"]];
-        else
-            resultadoModel.links = @[];
+        resultadoModel.links = [POCModelLink fromJSONArray:[data objectForKey:@"links"]];
     }
-    
     return resultadoModel;
 }
 

@@ -10,10 +10,6 @@
 #import "POCManager.h"
 #import "CellArticle.h"
 
-@interface UIListPocViewController ()
-
-@end
-
 @implementation UIListPocViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -70,8 +66,11 @@
         {
             data_list = nil;
             data_list = rep.resultado;
-            [self.tb_list reloadData];
-            [self setRefreshButtonItem];
+                if (!data_list)
+                {
+                    [self.tb_list reloadData];
+                    [self setRefreshButtonItem];
+                }
         }
         else
         {
@@ -96,7 +95,6 @@
         return [data_list count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *simpleTableIdentifier = @"CellArticle";
@@ -113,7 +111,6 @@
         [cell myInit:[data_list objectAtIndex:indexPath.row]];
     }
     return cell;
-
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

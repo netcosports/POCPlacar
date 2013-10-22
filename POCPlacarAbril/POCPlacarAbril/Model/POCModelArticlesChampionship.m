@@ -38,17 +38,10 @@
         else
             articlesPerChampionshipModel.pagina_actual = 0;
         
-        if ([data objectForKey:@"resultado"] != nil)
-            articlesPerChampionshipModel.resultado = [POCModelResult fromJSONArray:[data objectForKey:@"resultado"]];
-        else
-            articlesPerChampionshipModel.resultado = @[];
+        articlesPerChampionshipModel.resultado = [POCModelResult fromJSONArray:[data objectForKey:@"resultado"]];
         
-        if ([data objectForKey:@"links"] != nil)
-            articlesPerChampionshipModel.links = [POCModelLink fromJSONArray:[data objectForKey:@"links"]];
-        else
-            articlesPerChampionshipModel.links = @[];
+        articlesPerChampionshipModel.links = [POCModelLink fromJSONArray:[data objectForKey:@"links"]];
     }
-    
     return articlesPerChampionshipModel;
 }
 

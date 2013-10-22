@@ -36,7 +36,7 @@
 
 + (id) fromJSONArray:(NSArray*)data
 {
-    NSMutableArray *arrayArticles = [[NSMutableArray alloc] init];
+    NSMutableArray *arrayLinks = [[NSMutableArray alloc] init];
     
     if (data && [data isKindOfClass:[NSArray class]] && [data count] > 0)
     {
@@ -44,11 +44,11 @@
         {
             if (object && [object isKindOfClass:[NSDictionary class]])
             {
-                [arrayArticles addObject:[self fromJSON:object]];
+                [arrayLinks addObject:[self fromJSON:object]];
             }
         }
     }
-    return arrayArticles;
+    return arrayLinks;
 }
 
 @end

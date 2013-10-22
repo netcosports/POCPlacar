@@ -12,31 +12,31 @@
 
 + (id) fromJSON:(NSDictionary*)data
 {
-    POCModelImage *imagemModel = [[POCModelImage alloc]init];
+    POCModelImage *imageModel = [[POCModelImage alloc]init];
     
     if (data && [data isKindOfClass:[NSDictionary class]])
     {
         if ([data objectForKey:@"descricaco"] != nil)
-            imagemModel.descricaco = [data objectForKey:@"descricaco"];
+            imageModel.descricaco = [data objectForKey:@"descricaco"];
         else
-            imagemModel.descricaco = @"";
+            imageModel.descricaco = @"";
         
         if ([data objectForKey:@"original"] != nil)
-            imagemModel.original = [data objectForKey:@"original"];
+            imageModel.original = [data objectForKey:@"original"];
         else
-            imagemModel.original = @"";
+            imageModel.original = @"";
         
         if ([data objectForKey:@"url_template"] != nil)
-            imagemModel.url_template = [data objectForKey:@"url_template"];
+            imageModel.url_template = [data objectForKey:@"url_template"];
         else
-            imagemModel.url_template = @"";
+            imageModel.url_template = @"";
     }
-    return imagemModel;
+    return imageModel;
 }
 
 + (id) fromJSONArray:(NSArray*)data
 {
-    NSMutableArray *arrayImagems = [[NSMutableArray alloc] init];
+    NSMutableArray *arrayImages = [[NSMutableArray alloc] init];
     
     if (data && [data isKindOfClass:[NSArray class]] && [data count] > 0)
     {
@@ -44,11 +44,11 @@
         {
             if (object && [object isKindOfClass:[NSDictionary class]])
             {
-                [arrayImagems addObject:[self fromJSON:object]];
+                [arrayImages addObject:[self fromJSON:object]];
             }
         }
     }
-    return arrayImagems;
+    return arrayImages;
 }
 
 @end
