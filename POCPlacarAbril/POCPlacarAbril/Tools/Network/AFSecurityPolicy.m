@@ -117,19 +117,6 @@ static NSArray * AFPublicKeyTrustChainForServerTrust(SecTrustRef serverTrust) {
 
         SecCertificateRef someCertificates[] = {certificate};
         CFArrayRef certificates = CFArrayCreate(NULL, (const void **)someCertificates, 1, NULL);
-
-        SecTrustRef trust = NULL;
-
-        OSStatus status = SecTrustCreateWithCertificates(certificates, policy, &trust);
-        NSCAssert(status == errSecSuccess, @"SecTrustCreateWithCertificates error: %ld", (long int)status);
-
-        SecTrustResultType result;
-        status = SecTrustEvaluate(trust, &result);
-        NSCAssert(status == errSecSuccess, @"SecTrustEvaluate error: %ld", (long int)status);
-
-        [trustChain addObject:(__bridge_transfer id)SecTrustCopyPublicKey(trust)];
-
-        CFRelease(trust);
         CFRelease(certificates);
     }
     CFRelease(policy);
