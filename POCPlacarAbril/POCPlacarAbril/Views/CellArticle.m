@@ -1,4 +1,13 @@
+//
+//  CellArticle.m
+//  POCPlacarAbril
+//
+//  Created by Derivery Guillaume on 10/22/13.
+//  Copyright (c) 2013 NetcoSports. All rights reserved.
+//
+
 #import "CellArticle.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation CellArticle
 
@@ -23,6 +32,8 @@
     {
         [self.lb_title setText:modelResult_.titulo];
         [self.lb_date setText:modelResult_.data_disponibilizacao];
+        
+        [self.img_article setImageWithURL:[NSURL URLWithString:modelResult_.imagem.original] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     }
 }
 

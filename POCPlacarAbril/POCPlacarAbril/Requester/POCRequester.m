@@ -19,11 +19,11 @@
     NSLog(@"URL => %@", urlToRequester);
     
     NSMutableURLRequest * pocRequest = [[NSMutableURLRequest alloc] initWithURL:urlToRequester];
+    [pocRequest setTimeoutInterval:60];
+    [pocRequest setCachePolicy:NSURLRequestReloadIgnoringCacheData];
     [pocRequest setHTTPMethod:@"GET"];
     [pocRequest addValue:HEADER_TOKEN_VALUE forHTTPHeaderField:HEADER_TOKEN_KEY];
-    
-//    pocRequest = [[afNetworkingManager.requestSerializer requestBySerializingRequest:pocRequest withParameters:nil error:nil] mutableCopy];
-    
+
     AFHTTPRequestOperation *afNetworkingOperation = [afNetworkingManager HTTPRequestOperationWithRequest:pocRequest success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
         NSLog(@"RESPONSE => %@", responseObject);

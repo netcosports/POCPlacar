@@ -41,6 +41,16 @@
     self.navigationItem.rightBarButtonItem = refreshButton;
 }
 
+-(void)setLoadingItem
+{
+    UIActivityIndicatorView *activity_loading = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [activity_loading startAnimating];
+    UIBarButtonItem *loadingItem = [[UIBarButtonItem alloc] initWithCustomView:activity_loading];
+    
+    self.navigationItem.rightBarButtonItem = nil;
+    self.navigationItem.rightBarButtonItem = loadingItem;
+}
+
 -(void)setUpList
 {
     [self.tb_list setDelegate:self];
@@ -54,6 +64,7 @@
 
 -(void)loadData
 {
+    [self setLoadingItem];
     [POCManager getArticlesPerChampionship:^(POCModelArticlesChampionship *rep, BOOL success) {
         if (rep)
         {
@@ -120,7 +131,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
