@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F06D962F18165F9700D1939F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D962E18165F9700D1939F /* Foundation.framework */; };
+		F06D963118165F9700D1939F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D963018165F9700D1939F /* CoreGraphics.framework */; };
+		F06D963318165F9700D1939F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D963218165F9700D1939F /* UIKit.framework */; };
+		F06D963518165F9700D1939F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D963418165F9700D1939F /* CoreData.framework */; };
+		F06D963B18165F9700D1939F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F06D963918165F9700D1939F /* InfoPlist.strings */; };
+		F06D963D18165F9800D1939F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D963C18165F9800D1939F /* main.m */; };
+		F06D964118165F9800D1939F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D964018165F9800D1939F /* AppDelegate.m */; };
+		F06D964418165F9800D1939F /* POCPlacarAbril.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F06D964218165F9800D1939F /* POCPlacarAbril.xcdatamodeld */; };
+		F06D964D18165F9800D1939F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D964C18165F9800D1939F /* XCTest.framework */; };
+		F06D964E18165F9800D1939F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D962E18165F9700D1939F /* Foundation.framework */; };
+		F06D964F18165F9800D1939F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D963218165F9700D1939F /* UIKit.framework */; };
+		F06D965018165F9800D1939F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06D963418165F9700D1939F /* CoreData.framework */; };
+		F06D966A1816604700D1939F /* UIListPocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D96681816604700D1939F /* UIListPocViewController.m */; };
+		F06D966B1816604700D1939F /* UIListPocViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F06D96691816604700D1939F /* UIListPocViewController.xib */; };
+		F06D966E1816661F00D1939F /* POCRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D966D1816661F00D1939F /* POCRequester.m */; };
+		F06D968418166A9F00D1939F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D967218166A9F00D1939F /* AFHTTPRequestOperation.m */; };
+		F06D968518166A9F00D1939F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D967418166A9F00D1939F /* AFHTTPRequestOperationManager.m */; };
+		F06D968618166A9F00D1939F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D967618166A9F00D1939F /* AFHTTPSessionManager.m */; };
+		F06D968718166A9F00D1939F /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D967918166A9F00D1939F /* AFNetworkReachabilityManager.m */; };
+		F06D968818166A9F00D1939F /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D967B18166A9F00D1939F /* AFSecurityPolicy.m */; };
+		F06D968918166A9F00D1939F /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D967D18166A9F00D1939F /* AFURLConnectionOperation.m */; };
+		F06D968A18166A9F00D1939F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D967F18166A9F00D1939F /* AFURLRequestSerialization.m */; };
+		F06D968B18166A9F00D1939F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D968118166A9F00D1939F /* AFURLResponseSerialization.m */; };
+		F06D968C18166A9F00D1939F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D968318166A9F00D1939F /* AFURLSessionManager.m */; };
+		F0F7C689181681B80045FC6A /* POCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C688181681B80045FC6A /* POCManager.m */; };
+		F0F7C68D1816838F0045FC6A /* POCModelArticlesChampionship.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C68C1816838F0045FC6A /* POCModelArticlesChampionship.m */; };
+		F0F7C690181683A70045FC6A /* POCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C68F181683A70045FC6A /* POCModel.m */; };
+		F0F7C693181689860045FC6A /* POCModelResult.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C692181689860045FC6A /* POCModelResult.m */; };
+		F0F7C69618168BC60045FC6A /* POCModelImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C69518168BC60045FC6A /* POCModelImage.m */; };
+		F0F7C69918168CA60045FC6A /* POCModelLink.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C69818168CA60045FC6A /* POCModelLink.m */; };
+		F0F7C69E18169C290045FC6A /* CellArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C69C18169C290045FC6A /* CellArticle.m */; };
+		F0F7C69F18169C290045FC6A /* CellArticle.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C69D18169C290045FC6A /* CellArticle.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F06D965118165F9800D1939F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06D962318165F9700D1939F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F06D962A18165F9700D1939F;
+			remoteInfo = POCPlacarAbril;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F06D962B18165F9700D1939F /* POCPlacarAbril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCPlacarAbril.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F06D962E18165F9700D1939F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F06D963018165F9700D1939F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F06D963218165F9700D1939F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F06D963418165F9700D1939F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F06D963818165F9700D1939F /* POCPlacarAbril-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "POCPlacarAbril-Info.plist"; sourceTree = "<group>"; };
+		F06D963A18165F9700D1939F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F06D963C18165F9800D1939F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F06D963E18165F9800D1939F /* POCPlacarAbril-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "POCPlacarAbril-Prefix.pch"; sourceTree = "<group>"; };
+		F06D963F18165F9800D1939F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F06D964018165F9800D1939F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F06D964318165F9800D1939F /* POCPlacarAbril.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = POCPlacarAbril.xcdatamodel; sourceTree = "<group>"; };
+		F06D964B18165F9800D1939F /* POCPlacarAbrilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCPlacarAbrilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F06D964C18165F9800D1939F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F06D96671816604700D1939F /* UIListPocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListPocViewController.h; path = Controller/UIListPocViewController.h; sourceTree = "<group>"; };
+		F06D96681816604700D1939F /* UIListPocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIListPocViewController.m; path = Controller/UIListPocViewController.m; sourceTree = "<group>"; };
+		F06D96691816604700D1939F /* UIListPocViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UIListPocViewController.xib; path = Controller/UIListPocViewController.xib; sourceTree = "<group>"; };
+		F06D966C1816661F00D1939F /* POCRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POCRequester.h; path = Requester/POCRequester.h; sourceTree = "<group>"; };
+		F06D966D1816661F00D1939F /* POCRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = POCRequester.m; path = Requester/POCRequester.m; sourceTree = "<group>"; };
+		F06D967118166A9F00D1939F /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = Tools/AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		F06D967218166A9F00D1939F /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = Tools/AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		F06D967318166A9F00D1939F /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = Tools/AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		F06D967418166A9F00D1939F /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = Tools/AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		F06D967518166A9F00D1939F /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = Tools/AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		F06D967618166A9F00D1939F /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = Tools/AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		F06D967718166A9F00D1939F /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = Tools/AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		F06D967818166A9F00D1939F /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = Tools/AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		F06D967918166A9F00D1939F /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = Tools/AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		F06D967A18166A9F00D1939F /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = Tools/AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		F06D967B18166A9F00D1939F /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = Tools/AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		F06D967C18166A9F00D1939F /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = Tools/AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		F06D967D18166A9F00D1939F /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = Tools/AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		F06D967E18166A9F00D1939F /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = Tools/AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		F06D967F18166A9F00D1939F /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = Tools/AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		F06D968018166A9F00D1939F /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = Tools/AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		F06D968118166A9F00D1939F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = Tools/AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		F06D968218166A9F00D1939F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = Tools/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		F06D968318166A9F00D1939F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = Tools/AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		F0F7C687181681B80045FC6A /* POCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POCManager.h; path = Manager/POCManager.h; sourceTree = "<group>"; };
+		F0F7C688181681B80045FC6A /* POCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = POCManager.m; path = Manager/POCManager.m; sourceTree = "<group>"; };
+		F0F7C68B1816838F0045FC6A /* POCModelArticlesChampionship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POCModelArticlesChampionship.h; path = Model/POCModelArticlesChampionship.h; sourceTree = "<group>"; };
+		F0F7C68C1816838F0045FC6A /* POCModelArticlesChampionship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = POCModelArticlesChampionship.m; path = Model/POCModelArticlesChampionship.m; sourceTree = "<group>"; };
+		F0F7C68E181683A70045FC6A /* POCModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POCModel.h; path = Model/POCModel.h; sourceTree = "<group>"; };
+		F0F7C68F181683A70045FC6A /* POCModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = POCModel.m; path = Model/POCModel.m; sourceTree = "<group>"; };
+		F0F7C691181689860045FC6A /* POCModelResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POCModelResult.h; path = Model/POCModelResult.h; sourceTree = "<group>"; };
+		F0F7C692181689860045FC6A /* POCModelResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = POCModelResult.m; path = Model/POCModelResult.m; sourceTree = "<group>"; };
+		F0F7C69418168BC60045FC6A /* POCModelImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POCModelImage.h; path = Model/POCModelImage.h; sourceTree = "<group>"; };
+		F0F7C69518168BC60045FC6A /* POCModelImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = POCModelImage.m; path = Model/POCModelImage.m; sourceTree = "<group>"; };
+		F0F7C69718168CA60045FC6A /* POCModelLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = POCModelLink.h; path = Model/POCModelLink.h; sourceTree = "<group>"; };
+		F0F7C69818168CA60045FC6A /* POCModelLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = POCModelLink.m; path = Model/POCModelLink.m; sourceTree = "<group>"; };
+		F0F7C69B18169C290045FC6A /* CellArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellArticle.h; path = Views/CellArticle.h; sourceTree = "<group>"; };
+		F0F7C69C18169C290045FC6A /* CellArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellArticle.m; path = Views/CellArticle.m; sourceTree = "<group>"; };
+		F0F7C69D18169C290045FC6A /* CellArticle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellArticle.xib; path = Views/CellArticle.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F06D962818165F9700D1939F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F06D963118165F9700D1939F /* CoreGraphics.framework in Frameworks */,
+				F06D963518165F9700D1939F /* CoreData.framework in Frameworks */,
+				F06D963318165F9700D1939F /* UIKit.framework in Frameworks */,
+				F06D962F18165F9700D1939F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06D964818165F9800D1939F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F06D964D18165F9800D1939F /* XCTest.framework in Frameworks */,
+				F06D965018165F9800D1939F /* CoreData.framework in Frameworks */,
+				F06D964F18165F9800D1939F /* UIKit.framework in Frameworks */,
+				F06D964E18165F9800D1939F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F06D962218165F9700D1939F = {
+			isa = PBXGroup;
+			children = (
+				F06D963618165F9700D1939F /* POCPlacarAbril */,
+				F06D962D18165F9700D1939F /* Frameworks */,
+				F06D962C18165F9700D1939F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F06D962C18165F9700D1939F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F06D962B18165F9700D1939F /* POCPlacarAbril.app */,
+				F06D964B18165F9800D1939F /* POCPlacarAbrilTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F06D962D18165F9700D1939F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F06D962E18165F9700D1939F /* Foundation.framework */,
+				F06D963018165F9700D1939F /* CoreGraphics.framework */,
+				F06D963218165F9700D1939F /* UIKit.framework */,
+				F06D963418165F9700D1939F /* CoreData.framework */,
+				F06D964C18165F9800D1939F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F06D963618165F9700D1939F /* POCPlacarAbril */ = {
+			isa = PBXGroup;
+			children = (
+				F06D966318165FE600D1939F /* Classes */,
+				F06D963F18165F9800D1939F /* AppDelegate.h */,
+				F06D964018165F9800D1939F /* AppDelegate.m */,
+				F06D964218165F9800D1939F /* POCPlacarAbril.xcdatamodeld */,
+				F06D963718165F9700D1939F /* Supporting Files */,
+			);
+			path = POCPlacarAbril;
+			sourceTree = "<group>";
+		};
+		F06D963718165F9700D1939F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F06D963818165F9700D1939F /* POCPlacarAbril-Info.plist */,
+				F06D963918165F9700D1939F /* InfoPlist.strings */,
+				F06D963C18165F9800D1939F /* main.m */,
+				F06D963E18165F9800D1939F /* POCPlacarAbril-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F06D966318165FE600D1939F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F06D966F18166A6900D1939F /* Tools */,
+				F06D966518165FF100D1939F /* Requester */,
+				F0F7C686181681AA0045FC6A /* Manager */,
+				F0F7C68A181683270045FC6A /* Models */,
+				F06D966418165FEB00D1939F /* Controller */,
+				F0F7C69A18169BB80045FC6A /* Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F06D966418165FEB00D1939F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F06D96671816604700D1939F /* UIListPocViewController.h */,
+				F06D96681816604700D1939F /* UIListPocViewController.m */,
+				F06D96691816604700D1939F /* UIListPocViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F06D966518165FF100D1939F /* Requester */ = {
+			isa = PBXGroup;
+			children = (
+				F06D966C1816661F00D1939F /* POCRequester.h */,
+				F06D966D1816661F00D1939F /* POCRequester.m */,
+			);
+			name = Requester;
+			sourceTree = "<group>";
+		};
+		F06D966F18166A6900D1939F /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F06D967018166A7C00D1939F /* AFNetworking */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		F06D967018166A7C00D1939F /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F06D967118166A9F00D1939F /* AFHTTPRequestOperation.h */,
+				F06D967218166A9F00D1939F /* AFHTTPRequestOperation.m */,
+				F06D967318166A9F00D1939F /* AFHTTPRequestOperationManager.h */,
+				F06D967418166A9F00D1939F /* AFHTTPRequestOperationManager.m */,
+				F06D967518166A9F00D1939F /* AFHTTPSessionManager.h */,
+				F06D967618166A9F00D1939F /* AFHTTPSessionManager.m */,
+				F06D967718166A9F00D1939F /* AFNetworking.h */,
+				F06D967818166A9F00D1939F /* AFNetworkReachabilityManager.h */,
+				F06D967918166A9F00D1939F /* AFNetworkReachabilityManager.m */,
+				F06D967A18166A9F00D1939F /* AFSecurityPolicy.h */,
+				F06D967B18166A9F00D1939F /* AFSecurityPolicy.m */,
+				F06D967C18166A9F00D1939F /* AFURLConnectionOperation.h */,
+				F06D967D18166A9F00D1939F /* AFURLConnectionOperation.m */,
+				F06D967E18166A9F00D1939F /* AFURLRequestSerialization.h */,
+				F06D967F18166A9F00D1939F /* AFURLRequestSerialization.m */,
+				F06D968018166A9F00D1939F /* AFURLResponseSerialization.h */,
+				F06D968118166A9F00D1939F /* AFURLResponseSerialization.m */,
+				F06D968218166A9F00D1939F /* AFURLSessionManager.h */,
+				F06D968318166A9F00D1939F /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		F0F7C686181681AA0045FC6A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7C687181681B80045FC6A /* POCManager.h */,
+				F0F7C688181681B80045FC6A /* POCManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		F0F7C68A181683270045FC6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7C68E181683A70045FC6A /* POCModel.h */,
+				F0F7C68F181683A70045FC6A /* POCModel.m */,
+				F0F7C68B1816838F0045FC6A /* POCModelArticlesChampionship.h */,
+				F0F7C68C1816838F0045FC6A /* POCModelArticlesChampionship.m */,
+				F0F7C691181689860045FC6A /* POCModelResult.h */,
+				F0F7C692181689860045FC6A /* POCModelResult.m */,
+				F0F7C69418168BC60045FC6A /* POCModelImage.h */,
+				F0F7C69518168BC60045FC6A /* POCModelImage.m */,
+				F0F7C69718168CA60045FC6A /* POCModelLink.h */,
+				F0F7C69818168CA60045FC6A /* POCModelLink.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F0F7C69A18169BB80045FC6A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7C69B18169C290045FC6A /* CellArticle.h */,
+				F0F7C69C18169C290045FC6A /* CellArticle.m */,
+				F0F7C69D18169C290045FC6A /* CellArticle.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F06D962A18165F9700D1939F /* POCPlacarAbril */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F06D965D18165F9800D1939F /* Build configuration list for PBXNativeTarget "POCPlacarAbril" */;
+			buildPhases = (
+				F06D962718165F9700D1939F /* Sources */,
+				F06D962818165F9700D1939F /* Frameworks */,
+				F06D962918165F9700D1939F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = POCPlacarAbril;
+			productName = POCPlacarAbril;
+			productReference = F06D962B18165F9700D1939F /* POCPlacarAbril.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F06D964A18165F9800D1939F /* POCPlacarAbrilTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F06D966018165F9800D1939F /* Build configuration list for PBXNativeTarget "POCPlacarAbrilTests" */;
+			buildPhases = (
+				F06D964718165F9800D1939F /* Sources */,
+				F06D964818165F9800D1939F /* Frameworks */,
+				F06D964918165F9800D1939F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F06D965218165F9800D1939F /* PBXTargetDependency */,
+			);
+			name = POCPlacarAbrilTests;
+			productName = POCPlacarAbrilTests;
+			productReference = F06D964B18165F9800D1939F /* POCPlacarAbrilTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F06D962318165F9700D1939F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = NetcoSports;
+				TargetAttributes = {
+					F06D964A18165F9800D1939F = {
+						TestTargetID = F06D962A18165F9700D1939F;
+					};
+				};
+			};
+			buildConfigurationList = F06D962618165F9700D1939F /* Build configuration list for PBXProject "POCPlacarAbril" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F06D962218165F9700D1939F;
+			productRefGroup = F06D962C18165F9700D1939F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F06D962A18165F9700D1939F /* POCPlacarAbril */,
+				F06D964A18165F9800D1939F /* POCPlacarAbrilTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F06D962918165F9700D1939F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F06D963B18165F9700D1939F /* InfoPlist.strings in Resources */,
+				F06D966B1816604700D1939F /* UIListPocViewController.xib in Resources */,
+				F0F7C69F18169C290045FC6A /* CellArticle.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06D964918165F9800D1939F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F06D962718165F9700D1939F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0F7C69E18169C290045FC6A /* CellArticle.m in Sources */,
+				F06D968918166A9F00D1939F /* AFURLConnectionOperation.m in Sources */,
+				F06D968418166A9F00D1939F /* AFHTTPRequestOperation.m in Sources */,
+				F06D968718166A9F00D1939F /* AFNetworkReachabilityManager.m in Sources */,
+				F06D968C18166A9F00D1939F /* AFURLSessionManager.m in Sources */,
+				F06D968A18166A9F00D1939F /* AFURLRequestSerialization.m in Sources */,
+				F06D964118165F9800D1939F /* AppDelegate.m in Sources */,
+				F0F7C68D1816838F0045FC6A /* POCModelArticlesChampionship.m in Sources */,
+				F0F7C690181683A70045FC6A /* POCModel.m in Sources */,
+				F06D968B18166A9F00D1939F /* AFURLResponseSerialization.m in Sources */,
+				F06D964418165F9800D1939F /* POCPlacarAbril.xcdatamodeld in Sources */,
+				F06D963D18165F9800D1939F /* main.m in Sources */,
+				F06D968518166A9F00D1939F /* AFHTTPRequestOperationManager.m in Sources */,
+				F06D968818166A9F00D1939F /* AFSecurityPolicy.m in Sources */,
+				F06D966E1816661F00D1939F /* POCRequester.m in Sources */,
+				F0F7C69918168CA60045FC6A /* POCModelLink.m in Sources */,
+				F0F7C693181689860045FC6A /* POCModelResult.m in Sources */,
+				F0F7C689181681B80045FC6A /* POCManager.m in Sources */,
+				F0F7C69618168BC60045FC6A /* POCModelImage.m in Sources */,
+				F06D966A1816604700D1939F /* UIListPocViewController.m in Sources */,
+				F06D968618166A9F00D1939F /* AFHTTPSessionManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F06D964718165F9800D1939F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F06D965218165F9800D1939F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F06D962A18165F9700D1939F /* POCPlacarAbril */;
+			targetProxy = F06D965118165F9800D1939F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F06D963918165F9700D1939F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F06D963A18165F9700D1939F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F06D965B18165F9800D1939F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F06D965C18165F9800D1939F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F06D965E18165F9800D1939F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
+				INFOPLIST_FILE = "POCPlacarAbril/POCPlacarAbril-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F06D965F18165F9800D1939F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
+				INFOPLIST_FILE = "POCPlacarAbril/POCPlacarAbril-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F06D966118165F9800D1939F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/POCPlacarAbril.app/POCPlacarAbril";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "POCPlacarAbrilTests/POCPlacarAbrilTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F06D966218165F9800D1939F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/POCPlacarAbril.app/POCPlacarAbril";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
+				INFOPLIST_FILE = "POCPlacarAbrilTests/POCPlacarAbrilTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F06D962618165F9700D1939F /* Build configuration list for PBXProject "POCPlacarAbril" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F06D965B18165F9800D1939F /* Debug */,
+				F06D965C18165F9800D1939F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F06D965D18165F9800D1939F /* Build configuration list for PBXNativeTarget "POCPlacarAbril" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F06D965E18165F9800D1939F /* Debug */,
+				F06D965F18165F9800D1939F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F06D966018165F9800D1939F /* Build configuration list for PBXNativeTarget "POCPlacarAbrilTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F06D966118165F9800D1939F /* Debug */,
+				F06D966218165F9800D1939F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F06D964218165F9800D1939F /* POCPlacarAbril.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F06D964318165F9800D1939F /* POCPlacarAbril.xcdatamodel */,
+			);
+			currentVersion = F06D964318165F9800D1939F /* POCPlacarAbril.xcdatamodel */;
+			path = POCPlacarAbril.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F06D962318165F9700D1939F /* Project object */;
+}

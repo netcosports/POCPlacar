@@ -1,0 +1,24 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+
+#define HEADER_TOKEN_KEY @"X-Placar-Token"
+#define HEADER_TOKEN_VALUE @"Token token=\"8625adda9058039971985eb1bbc4cff9d5bd2e7f1617fce3a1c1ed3dad87f74b62ac4f548f7f7dfd664acab6c45cedfcc657fb7ea7f59ac6ee58354aa59bfbd8\""
+
+#define POC_HOST @"http://ext-api.placar.abril.com.br"
+#define POC_URL @"/campeonatos/:campeonato/materias.json"
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
