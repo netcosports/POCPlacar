@@ -43,7 +43,7 @@
 // This method is creating the refresh button on the right top corner of the screen.
 -(void)setRefreshButtonItem
 {
-    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithTitle:@"Refresh" style:UIBarButtonItemStylePlain target:self action:@selector(refresh)];
+    UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Refresh", @"") style:UIBarButtonItemStylePlain target:self action:@selector(refresh)];
     
     self.navigationItem.rightBarButtonItem = nil;
     self.navigationItem.rightBarButtonItem = refreshButton;

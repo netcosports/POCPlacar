@@ -1,0 +1,11 @@
+/* Localized versions of Info.plist keys */
+
+"Articles per championship" = "Articles per championship";
+
+"Refresh" = "Refresh";
+
+"Warning" = "Warning";
+
+"Something went wront while attempting to retrieve information from the Placar - API" = "Something went wront while attempting to retrieve information from the Placar - API";
+
+"OK" = "OK";

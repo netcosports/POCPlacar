@@ -1,0 +1,11 @@
+/* Localized versions of Info.plist keys */
+
+"Articles per championship" = "Notícias por campeonato";
+
+"Refresh" = "Atualizar";
+
+"Warning" = "Atenção";
+
+"Something went wront while attempting to retrieve information from the Placar - API" = "Um erro ocorreu na tentativa de recuperação da informação vinda da API - Placar";
+
+"OK" = "OK";

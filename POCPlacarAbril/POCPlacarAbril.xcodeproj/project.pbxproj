@@ -43,6 +43,7 @@
 		F0F7C6CB1816BC900045FC6A /* Logonetco120.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6C81816BC900045FC6A /* Logonetco120.png */; };
 		F0F7C6CD1816C64D0045FC6A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C6CC1816C64D0045FC6A /* Default-568h@2x.png */; };
 		F0F7C7131817DC860045FC6A /* NSObject+POCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F7C7121817DC860045FC6A /* NSObject+POCUtils.m */; };
+		F0F7C71C18182A260045FC6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F0F7C71918182A260045FC6A /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		F0F7C6CC1816C64D0045FC6A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F0F7C7111817DC860045FC6A /* NSObject+POCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+POCUtils.h"; path = "Tools/Utils/NSObject+POCUtils.h"; sourceTree = "<group>"; };
 		F0F7C7121817DC860045FC6A /* NSObject+POCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+POCUtils.m"; path = "Tools/Utils/NSObject+POCUtils.m"; sourceTree = "<group>"; };
+		F0F7C71A18182A260045FC6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0F7C71B18182A260045FC6A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +169,7 @@
 				F06D963F18165F9800D1939F /* AppDelegate.h */,
 				F06D964018165F9800D1939F /* AppDelegate.m */,
 				F0F7C6C11816B5CF0045FC6A /* Resources */,
+				F0F7C71818182A260045FC6A /* Lang */,
 				F06D963718165F9700D1939F /* Supporting Files */,
 			);
 			path = POCPlacarAbril;
@@ -319,6 +323,14 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		F0F7C71818182A260045FC6A /* Lang */ = {
+			isa = PBXGroup;
+			children = (
+				F0F7C71918182A260045FC6A /* Localizable.strings */,
+			);
+			path = Lang;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -377,6 +389,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				pt,
 			);
 			mainGroup = F06D962218165F9700D1939F;
 			productRefGroup = F06D962218165F9700D1939F;
@@ -399,6 +412,7 @@
 				F0F7C6CD1816C64D0045FC6A /* Default-568h@2x.png in Resources */,
 				F0F7C6C91816BC900045FC6A /* Logonetco58.png in Resources */,
 				F06D963B18165F9700D1939F /* InfoPlist.strings in Resources */,
+				F0F7C71C18182A260045FC6A /* Localizable.strings in Resources */,
 				F0F7C6CA1816BC900045FC6A /* Logonetco80.png in Resources */,
 				F0F7C6C41816B6380045FC6A /* placeholder.png in Resources */,
 				F06D966B1816604700D1939F /* UIListPocViewController.xib in Resources */,
@@ -469,6 +483,15 @@
 				F06D963A18165F9700D1939F /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F0F7C71918182A260045FC6A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0F7C71A18182A260045FC6A /* en */,
+				F0F7C71B18182A260045FC6A /* pt */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
