@@ -18,14 +18,14 @@
     if (self)
     { }
     return self;
-    
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [self setTitle:NSLocalizedString(@"Articles per championship", @"")];
-    
+
     // When the user click on an article, it launches safari, but he comes back in the application the data has to be refreshed. The notification "refreshArticles" is launched in "AppDelegate.m" and it is handled in this controller by the method "-(void)refresh". This controller becomes an observer for the NSNotificationCenter.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refresh) name:@"refreshArticles" object:nil];
     

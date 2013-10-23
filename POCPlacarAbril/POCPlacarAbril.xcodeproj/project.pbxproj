@@ -57,7 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F06D962B18165F9700D1939F /* POCPlacarAbril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = POCPlacarAbril.app; path = "/Appsfans/1NEW/APPS/POCPlacar/POCPlacarAbril/build/Debug-iphoneos/POCPlacarAbril.app"; sourceTree = "<absolute>"; };
 		F06D962E18165F9700D1939F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F06D963018165F9700D1939F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		F06D963218165F9700D1939F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -67,7 +66,6 @@
 		F06D963E18165F9800D1939F /* POCPlacarAbril-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "POCPlacarAbril-Prefix.pch"; sourceTree = "<group>"; };
 		F06D963F18165F9800D1939F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F06D964018165F9800D1939F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F06D964B18165F9800D1939F /* POCPlacarAbrilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = POCPlacarAbrilTests.xctest; path = "/Appsfans/1NEW/APPS/POCPlacar/POCPlacarAbril/build/Debug-iphoneos/POCPlacarAbrilTests.xctest"; sourceTree = "<absolute>"; };
 		F06D96671816604700D1939F /* UIListPocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIListPocViewController.h; path = Controller/UIListPocViewController.h; sourceTree = "<group>"; };
 		F06D96681816604700D1939F /* UIListPocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIListPocViewController.m; path = Controller/UIListPocViewController.m; sourceTree = "<group>"; };
 		F06D96691816604700D1939F /* UIListPocViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UIListPocViewController.xib; path = Controller/UIListPocViewController.xib; sourceTree = "<group>"; };
@@ -119,6 +117,8 @@
 		F0F7C7121817DC860045FC6A /* NSObject+POCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+POCUtils.m"; path = "Tools/Utils/NSObject+POCUtils.m"; sourceTree = "<group>"; };
 		F0F7C71A18182A260045FC6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F0F7C71B18182A260045FC6A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F0F7C72C181847660045FC6A /* POCPlacarAbril.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCPlacarAbril.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0F7C72D181847660045FC6A /* POCPlacarAbrilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCPlacarAbrilTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +149,8 @@
 			children = (
 				F06D963618165F9700D1939F /* POCPlacarAbril */,
 				F06D962D18165F9700D1939F /* Frameworks */,
+				F0F7C72C181847660045FC6A /* POCPlacarAbril.app */,
+				F0F7C72D181847660045FC6A /* POCPlacarAbrilTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -348,7 +350,7 @@
 			);
 			name = POCPlacarAbril;
 			productName = POCPlacarAbril;
-			productReference = F06D962B18165F9700D1939F /* POCPlacarAbril.app */;
+			productReference = F0F7C72C181847660045FC6A /* POCPlacarAbril.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F06D964A18165F9800D1939F /* POCPlacarAbrilTests */ = {
@@ -366,7 +368,7 @@
 			);
 			name = POCPlacarAbrilTests;
 			productName = POCPlacarAbrilTests;
-			productReference = F06D964B18165F9800D1939F /* POCPlacarAbrilTests.xctest */;
+			productReference = F0F7C72D181847660045FC6A /* POCPlacarAbrilTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -578,8 +580,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
 				INFOPLIST_FILE = "POCPlacarAbril/POCPlacarAbril-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -593,8 +597,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POCPlacarAbril/POCPlacarAbril-Prefix.pch";
 				INFOPLIST_FILE = "POCPlacarAbril/POCPlacarAbril-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
