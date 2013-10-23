@@ -8,52 +8,32 @@
 
 #import "POCModelResult.h"
 #import "POCModelLink.h"
+#import "NSObject+POCUtils.h"
 
 @implementation POCModelResult
 
+// This is the model that is created from the data contained in the value of the key "resultado" withing the JSON.
+// Checks are made to avoid issues in this NSDictionary
 + (POCModelResult *) fromJSON:(NSDictionary*)data
 {
     POCModelResult *resultadoModel = [[POCModelResult alloc]init];
     
     if (data && [data isKindOfClass:[NSDictionary class]])
     {
-        id titulo = [data objectForKey:@"titulo"];
-        if (titulo != nil && [titulo isKindOfClass:[NSString class]])
-            resultadoModel.titulo = titulo;
-        else
-            resultadoModel.titulo = @"";
-        
-        id subtitulo = [data objectForKey:@"subtitulo"];
-        if (subtitulo != nil && [subtitulo isKindOfClass:[NSString class]])
-            resultadoModel.subtitulo = subtitulo;
-        else
-            resultadoModel.subtitulo = @"";
-        
-        id slug = [data objectForKey:@"slug"];
-        if (slug != nil && [slug isKindOfClass:[NSString class]])
-            resultadoModel.slug = slug;
-        else
-            resultadoModel.slug = @"";
-
-        id data_disponibilizacao = [data objectForKey:@"data_disponibilizacao"];
-        if (data_disponibilizacao != nil && [data_disponibilizacao isKindOfClass:[NSString class]])
-            resultadoModel.data_disponibilizacao = data_disponibilizacao;
-        else
-            resultadoModel.data_disponibilizacao = @"";
-        
-        id recurso_url = [data objectForKey:@"recurso_url"];
-        if (recurso_url != nil && [recurso_url isKindOfClass:[NSString class]])
-            resultadoModel.recurso_url = recurso_url;
-        else
-            resultadoModel.recurso_url = @"";
+        // Concerning the method getVerifiedString, please take a look at the file NSObject+POCUtils.h
+        resultadoModel.titulo = [NSObject getVerifiedString:[data objectForKey:@"titulo"]];
+        resultadoModel.subtitulo = [NSObject getVerifiedString:[data objectForKey:@"subtitulo"]];
+        resultadoModel.slug = [NSObject getVerifiedString:[data objectForKey:@"slug"]];
+        resultadoModel.data_disponibilizacao = [NSObject getVerifiedString:[data objectForKey:@"data_disponibilizacao"]];
+        resultadoModel.recurso_url = [NSObject getVerifiedString:[data objectForKey:@"recurso_url"]];
         
         resultadoModel.imagem = [POCModelImage fromJSON:[data objectForKey:@"imagem"]];
-        
         resultadoModel.links = [POCModelLink fromJSONArray:[data objectForKey:@"links"]];
     }
     return resultadoModel;
 }
 
+// If multiple POCModelResult models have to be created from a array of dictionaries. This method will create another array containing the instantiated models.
 + (NSArray *) fromJSONArray:(NSArray*)data
 {
     NSMutableArray *arrayResultados = [[NSMutableArray alloc] init];

@@ -7,36 +7,26 @@
 //
 
 #import "POCModelImage.h"
+#import "NSObject+POCUtils.h"
 
 @implementation POCModelImage
 
+// This is the model that is created from the data contained in the value of the key "imagem" withing the JSON.
+// Checks are made to avoid issues in this NSDictionary
 + (POCModelImage *) fromJSON:(NSDictionary*)data
 {
     POCModelImage *imageModel = [[POCModelImage alloc]init];
     
     if (data && [data isKindOfClass:[NSDictionary class]])
     {
-        id descricaco = [data objectForKey:@"descricaco"];
-        if (descricaco != nil && [descricaco isKindOfClass:[NSString class]])
-            imageModel.descricaco = descricaco;
-        else
-            imageModel.descricaco = @"";
-        
-        id original = [data objectForKey:@"original"];
-        if (original != nil && [original isKindOfClass:[NSString class]])
-            imageModel.original = original;
-        else
-            imageModel.original = @"";
-        
-        id url_template = [data objectForKey:@"url_template"];
-        if (url_template != nil && [url_template isKindOfClass:[NSString class]])
-            imageModel.url_template = url_template;
-        else
-            imageModel.url_template = @"";
+        imageModel.descricaco = [NSObject getVerifiedString:[data objectForKey:@"descricaco"]];
+        imageModel.original = [NSObject getVerifiedString:[data objectForKey:@"original"]];
+        imageModel.url_template = [NSObject getVerifiedString:[data objectForKey:@"url_template"]];
     }
     return imageModel;
 }
 
+// If multiple POCModelImage models have to be created from a array of dictionaries. This method will create another array containing the instantiated models.
 + (NSArray *) fromJSONArray:(NSArray*)data
 {
     NSMutableArray *arrayImages = [[NSMutableArray alloc] init];

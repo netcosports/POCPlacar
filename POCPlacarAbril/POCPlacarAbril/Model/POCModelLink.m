@@ -7,36 +7,26 @@
 //
 
 #import "POCModelLink.h"
+#import "NSObject+POCUtils.h"
 
 @implementation POCModelLink
 
+// This is the model that is created from the data contained in the value of the key "links" withing the JSON.
+// Checks are made to avoid issues in this NSDictionary
 + (POCModelLink *) fromJSON:(NSDictionary*)data
 {
     POCModelLink *linkModel = [[POCModelLink alloc]init];
     
     if (data && [data isKindOfClass:[NSDictionary class]])
     {
-        id href = [data objectForKey:@"href"];
-        if (href != nil && [href isKindOfClass:[NSString class]])
-            linkModel.href = href;
-        else
-            linkModel.href = @"";
-
-        id rel = [data objectForKey:@"rel"];
-        if (rel != nil && [rel isKindOfClass:[NSString class]])
-            linkModel.rel = rel;
-        else
-            linkModel.rel = @"";
-
-        id type = [data objectForKey:@"type"];
-        if (type != nil && [type isKindOfClass:[NSString class]])
-            linkModel.type = type;
-        else
-            linkModel.type = @"";
+        linkModel.href = [NSObject getVerifiedString:[data objectForKey:@"href"]];
+        linkModel.rel = [NSObject getVerifiedString:[data objectForKey:@"rel"]];
+        linkModel.type = [NSObject getVerifiedString:[data objectForKey:@"type"]];
     }
     return linkModel;
 }
 
+// If multiple POCModelLink models have to be created from a array of dictionaries. This method will create another array containing the instantiated models.
 + (NSArray *) fromJSONArray:(NSArray*)data
 {
     NSMutableArray *arrayLinks = [[NSMutableArray alloc] init];

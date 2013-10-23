@@ -14,7 +14,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     
     UIListPocViewController *pocListViewController = [[UIListPocViewController alloc] initWithNibName:@"UIListPocViewController" bundle:nil];
     
@@ -41,6 +40,11 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    // A notification (refreshArticles) is send when the application comes to the foreground after being send to the background.
+    // It happens when the user has press the "Home Button" or when he clicked on an article and then comes back on the application.
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshArticles" object:nil];
+    
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
